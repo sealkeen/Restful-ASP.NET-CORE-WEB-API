@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EPAM.CSCourse2021Q3.M10_Domain\EPAM.CSCourse2021Q3.M10_Domain.csproj" />
+    <ProjectReference Include="..\EPAM.CSCourse2021Q3.M10_Logic\EPAM.CSCourse2021Q3.M10_Logic.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EPAM.CSCourse2016.SilkinIvan.SealkeenJSON.Parser">
+      <HintPath>O:\VCSharp\Epam Training Q4 2016\EPAM.CSCourse2016.SilkinIvan.SealkeenJSON.Parser\bin\Debug\netstandard2.1\EPAM.CSCourse2016.SilkinIvan.SealkeenJSON.Parser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
