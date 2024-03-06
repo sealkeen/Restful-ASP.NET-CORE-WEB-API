@@ -1,26 +1,11 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Module10ASP.NetCoreWebApi;
 
-namespace Module10ASP.NetCoreWebApi
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
+// Use Host.CreateDefaultBuilder() instead of WebApplication.CreateBuilder();
+// To be able to call UseStartup<>()
+var builder = Host.CreateDefaultBuilder(args);
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
-}
+builder.ConfigureWebHostDefaults((wh) => wh.UseStartup<Startup>());
+
+var app = builder.Build();
+
+app.Run();

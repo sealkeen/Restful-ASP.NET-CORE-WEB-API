@@ -13,7 +13,6 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Module10Core;
 using Microsoft.OpenApi.Models;
-using Swashbuckle;
 
 namespace Module10ASP.NetCoreWebApi
 {
